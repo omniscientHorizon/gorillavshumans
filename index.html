@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GORILLA: 1 vs 100</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>Humans V/S Gorilla</h1>
+        <p>You are a gorilla fighting against 100 humans!</p>
+        <p>Defeat them and reclaim your lost land!</p>
+      
+        <div class="controls">
+            <p>WASD / Arrow Keys - Move</p>
+            <p>Left Click - Push Humans</p>
+            <p>Right Click - Grab & Throw</p>
+            <p>Space - Jump Attack</p>
+        </div>
+
+        <!-- Difficulty Selector Container -->
+        <div class="difficulty-container">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+                <option value="impossible">Impossible</option>
+            </select>
+        </div>
+
+        <button id="start-button">START GAME</button>
+    </div>
+
+    <!-- Game Canvas and UI -->
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- In-Game UI -->
+        <div id="ui">
+            <div id="health-bar">
+                <div id="health-fill"></div>
+            </div>
+            <div id="humans-counter">Humans: 100</div>
+            <div id="timer">Time: 0</div>
+            <div id="score">Score: 0</div>
+            <button id="music-toggle" class="small-button">🎵 Music: On</button>
+
+        </div>
+
+        <!-- Game Over / Win Screen -->
+        <div id="game-over" style="display: none;">
+            <h2 id="final-message">GAME OVER</h2>
+            <p id="final-score">Score: 0</p>
+            <button id="restart-button">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Game Script -->
+    <script src="game.js"></script>
+</body>
+</html>

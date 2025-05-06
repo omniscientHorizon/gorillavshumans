@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('./assets/bg.png') no-repeat center center fixed;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: transparent; 
+}
+
+#gameCanvas {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1); /* subtle border */
+}
+
+#ui {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+#health-bar {
+    width: 200px;
+    height: 20px;
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+#health-fill {
+    height: 100%;
+    width: 100%;
+    background-color: #f00;
+    transition: width 0.3s;
+}
+
+#humans-counter, #score {
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+#timer {
+    text-align: center;
+    flex-grow: 1;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+#restart-button {
+    background-color: #f00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 10;
+}
+
+#start-screen h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #f00;
+    text-shadow: 0 0 10px #000;
+}
+
+.controls {
+    margin: 20px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#start-button {
+    background-color: #f00;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#start-button:hover {
+    transform: scale(1.1);
+}
+
+#score {
+    margin-left: 20px;
+    white-space: nowrap;
+    color: white;
+    font-size: 18px;
+}
+
+.difficulty-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+#difficulty {
+    margin-top: 8px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background-color: #111;
+    color: white;
+    appearance: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    text-align: center;
+    cursor: pointer;
+}
+
+#difficulty:hover {
+    background-color: #222;
+}
+
+#music-toggle {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    pointer-events: auto; /* override UI's pointer-events:none */
+}
+
+#music-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
